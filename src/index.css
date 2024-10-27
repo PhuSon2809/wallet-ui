@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Thin';
+  src:
+    local('ClearSans Thin'),
+    url('./assets/fonts/ClearSans-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Regular';
+  src:
+    local('ClearSans Regular'),
+    url('./assets/fonts/ClearSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Medium';
+  src:
+    local('ClearSans Light'),
+    url('./assets/fonts/ClearSans-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Light';
+  src:
+    local('ClearSans Regular'),
+    url('./assets/fonts/ClearSans-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bold';
+  src:
+    local('ClearSans Bold'),
+    url('./assets/fonts/ClearSans-Bold.ttf') format('truetype');
+}
+
+* {
+  font-family: 'Regular', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  user-select: none;
+}
+
+#root {
+  padding: 0 !important;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: white !important;
+}
+
+button {
+  cursor: pointer;
+}
