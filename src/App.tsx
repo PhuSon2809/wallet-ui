@@ -36,7 +36,7 @@ function App() {
   }
 
   return (
-    <main className='mx-auto text-left max-w-[390px] bg-main bg-no-repeat bg-center bg-cover min-h-screen pb-40'>
+    <main className='mx-auto text-left w-full bg-main bg-no-repeat bg-center bg-cover min-h-screen pb-40'>
       <section className='p-5 py-8 bg-white/[.45] backdrop-blur-[55px] shadow-s-2'>
         <p className='text-[#3C3C43] text-[16px]/[22px] font-bold'>Select provider to get a quote</p>
 
@@ -146,20 +146,32 @@ function App() {
       </section>
 
       <section className='mt-5 px-5'>
-        <img src={images.images.three_card} alt='three-card' className='w-full max-w-[300px] mx-auto' />
+        <img
+          src={images.images.three_card}
+          alt='three-card'
+          className='w-full sm:max-w-[300px] md:max-w-[410px] mx-auto'
+        />
 
-        <div className='relative mt-10 bg-white/[.75] backdrop-blur-[80px] rounded-xl px-5 py-[14px] space-y-[18px]'>
+        <div className='relative mt-10 bg-white/[.75] backdrop-blur-[80px] rounded-xl md:rounded-2xl px-5 py-[14px] md:px-6 md:py-4 space-y-[18px] md:space-y-6'>
           {listCardyTypes.map((type) => (
             <div className='flex items-center gap-4'>
-              <div className='rounded-full size-10 shrink-0 bg-white/[.45] backdrop-blur-[20px] flex items-center justify-center overflow-hidden'>
-                <img src={type.icon} alt={type.title} />
+              <div className='rounded-full size-10 md:size-[53px] flex-shrink-0 bg-white/[.45] backdrop-blur-[20px] flex items-center justify-center overflow-hidden'>
+                <img src={type.icon} alt={type.title} className='size-auto md:size-[30px]' />
               </div>
-              <p className='text-[13px]/[18px] text-[#636369]'>{type.title}</p>
+              <p className='sm:text-[13px]/[18px] md:text-[18px]/[18px] text-[#636369]'>{type.title}</p>
             </div>
           ))}
 
-          <img src={images.icons.arrow_dash_1} alt='arrow_dash_1' className='absolute top-[30px] left-[14px]' />
-          <img src={images.icons.arrow_dash_2} alt='arrow_dash_2' className='absolute top-[88px] left-[54px]' />
+          <img
+            src={images.icons.arrow_dash_1}
+            alt='arrow_dash_1'
+            className='absolute top-[30px] left-[14px] md:top-[40px] md:left-[20px] scale-100 md:scale-110'
+          />
+          <img
+            src={images.icons.arrow_dash_2}
+            alt='arrow_dash_2'
+            className='absolute top-[88px] left-[54px] md:top-[118px] md:left-[70px] scale-100 md:scale-110'
+          />
         </div>
       </section>
 
@@ -239,10 +251,7 @@ function App() {
           <p className='ml-[26px] mt-1 h-[18px] text-[14px] text-red-500'>{errMessage && errMessage}</p>
         </div>
 
-        <button
-          style={{}}
-          className='uppercase font-bold text-white w-full h-[56px] flex items-center justify-center rounded-[30px]'
-        >
+        <button className='btn-shadow uppercase bg-[#FF8A64] font-bold text-white w-full h-[56px] flex items-center justify-center rounded-[30px]'>
           next
         </button>
       </section>

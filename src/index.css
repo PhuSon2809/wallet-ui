@@ -59,3 +59,13 @@ body {
 button {
   cursor: pointer;
 }
+
+.btn-shadow {
+  box-shadow: 0px 1px 40px 0px #ffc16433 inset;
+  box-shadow: 0px 4px 18px 0px #ff8a644d inset;
+  box-shadow: 0px 98px 100px -48px #ff8a643d inset;
+  box-shadow: 0px -82px 68px -64px #ff8a64ad inset;
+  box-shadow: 0px 7px 6px -4px #ffffff80 inset;
+  box-shadow: 0px 39px 56px -36px #ffffff80 inset;
+  backdrop-filter: blur(100px);
+}
